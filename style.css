@@ -4,6 +4,55 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f2f2f2;
+}
+
+
+/* Navbar */
+.navbar {
+    padding: 15px 15px;
+    width: 100%;
+    z-index: 1000;
+    height: 5px;
+}
+
+
+/* Logo */
+.logo {
+    padding: 8px 8px;
+}
+
+
+/* Home */
+.home {
+    padding: 10px 10px;
+}
+
+.home__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home__description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.home__easterEgg {
+    padding: 8px;
+}
+.home__easterEgg--terminal{
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.home__easterEgg--terminal p {
 }
