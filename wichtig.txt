@@ -1,1 +1,2 @@
 C:\Users\user\Desktop\VSC WIN\Portfolio
+cd '/Users/sebastianbuhrmann/Desktop/Visual Studio Code/Portfolio'

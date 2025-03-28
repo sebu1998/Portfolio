@@ -1,72 +1,54 @@
-/*---------------------*/
-/*---- general Settings ---------*/
-/*---------------------*/
+/* === Settings === */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
+    line-height: 1.6;
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #4f4949ab;
+    color: #fffcfc;
 }
 
-
-/*---------------------*/
-/*---- Navbar ---------*/
-/*---------------------*/
-.navbar {
-    padding: 15px 15px;
+ /* === Navigation === */
+ .navbar {
+    background-color: #333;
+    padding: 1rem;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    height: 5px;
-}
+  }
 
+  .navbar ul {
+    display: flex;
+    justify-content:  flex-end;
+    gap: 2rem;
+    list-style: none;
+  }
 
-/*---------------------*/
-/*---- Logo -----------*/
-/*---------------------*/
-.logo {
-    padding: 8px 8px;
-}
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact__spezial {
+    border: 1px solid violet;
+    background-color: violet;
+    padding: 0.5rem 1rem;
+  }
 
-/*---------------------*/
-/*---- Home -----------*/
-/*---------------------*/
-.home {
-    padding: 100px 100px;
-}
-.home__title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-}
-.home__description {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #777;
-    margin-bottom: 20px;
-}
-.home__easterEgg {
-    padding: 8px;
-}
-.home__easterEgg--terminal{
-    background-color: black;
-    color: white;
-    font-weight: 400;
+  /* === Start & Begrüßung === */
+  .start__terminal {
+    color: #fffcfc;
+    font-size: 1rem;
+    background: black;
     width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-}
-.home__easterEgg--terminal p {
-}
-.home__easterEgg--description {
-}
-
-/*---------------------*/
-/*---- Über mich ------*/
-/*---------------------*/
-.about {
-    padding: 100px 100px;
-}
+    height: 50px;
+  }

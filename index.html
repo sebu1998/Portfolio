@@ -3,65 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Bewerbung - Sebastian Bührmann</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://kit.fontawesome.com/3a8d9d58bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <header class="navbar">
-        navbar
-    </header>
-
     <main>
-        <!---- Name / Bild / Slogan -->
-        <section class="logo">
-            <h1>logo</h1>
-            <h2>Bild</h2>
-            <h3>Slogan</h3>
-        </section>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#aboutMe">Über mich</a></li>
+                <li><a href="#career">Mein Weg</a></li>
+                <li><a href="qualifications">Qualifikationen</a></li>
+                <li><a href="#motivation">Motivation</a></li>
+                <li><a class="contact__spezial" href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
 
-        <!-------------------->
-        <!---- Home Seite ---->
-        <!-------------------->
-        <section class="home">
-            <h1 class="home__title">Herzlich Willkommen auf meiner Seite</h1>
-                <p class="home__description">Ich bin Sebastian Bührmann – angehender Fachinformatiker für Anwendungsentwicklung mit handfester Berufserfahrung im Technik- und Bauwesen.
-                     Was mich ausmacht? Ich verbinde praktisches Verständnis mit digitaler Begeisterung.  <br>Ob Software, die Prozesse vereinfacht, oder Lösungen, die den Alltag effizienter gestalten – ich bin bereit, mich einzubringen, zu lernen und weiterzuwachsen. <br>
-                        Meine berufliche Reise begann nicht im Büro, sondern auf der Baustelle – mit viel Verantwortung, klaren Strukturen und einem hohen Anspruch an Qualität. Diese Haltung bringe ich jetzt mit in die IT-Welt. <br>
-                            Schauen Sie sich gerne um – ich freue mich über jedes Interesse, jede Kontaktaufnahme und vielleicht ja sogar eine zukünftige Zusammenarbeit! <br>
-                </p>
+       <!-- startseite und Begrüßung -->
+        <section id="start">
+            <div class="start">
+                <h1>Sebastian Bührmann</h1>
+                    <p class="slogan">Aus der Praxis in den Code – mit Herz, Verstand und Begeisterung.</p>
+                        <img src="" alt="Bild von mir">
+            </div>
 
-            <div class="home__easterEgg">
-                <div class="home__easterEgg--terminal">
-                    <p> "Hello World!"</p>
-                </div>
-                <p class="home__easterEgg--description">Hello World anmiert und beim Klick „Wer das hier findet, hat ein Auge fürs Detail – wir passen gut zusammen! 😎“</p>
-            </div>    
-        </section>
+            <div class="start__description">
+                <p>Willkommen auf meiner digitalen Bewerbungsseite!  
+                    Ich bin Sebastian Bührmann – angehender Fachinformatiker für Anwendungsentwicklung mit technischem Hintergrund, klarer Motivation und dem Wunsch, mich in einem passenden Praktikumsbetrieb einzubringen.</p>
+            </div>
 
+            <div class="start__terminal">
+            <i class="fa-solid fa-terminal"></i>
+            </div>   
 
-        <!-------------------->
-        <!---- Über mich ---->
-        <!-------------------->
-        <section class="about">
-            <h1 class="about__title">Über mich</h1>
-            <p class="about__description">Nach mehreren Jahren als Kolonnenführer im Kabel- und Rohrleitungsbau habe ich eines erkannt:   <br>  <br>
-                Die Digitalisierung verändert alles – und ich will aktiv mitgestalten. <br>  <br>
-                Deshalb habe ich 2025 eine Umschulung zum Fachinformatiker für Anwendungsentwicklung begonnen.  
-                Ich liebe es, Probleme zu lösen, Abläufe zu optimieren und Neues zu lernen. <br>  <br>
-                Gerade weil ich nicht den klassischen Weg gegangen bin, bringe ich eine besondere Perspektive mit: Ich kenne die Praxis, weiß wie Prozesse laufen – und wo sie oft stocken. Diese Lücke möchte ich mit durchdachter, gut entwickelter Software schließen. <br>  <br>
         </section>
 
 
         <!-------------------->
         <!---- Timeline ---->
         <!-------------------->
-        <section class="timeline">
+        <!--   <section class="timeline">
             <div class="timeline__title">
                 <h1>Mein Werdegang</h1>
             </div>
@@ -115,7 +102,7 @@
         
         
 
-        <!------------------------------->
+        <!- ------------------------------>
         <!---- Skills ------------------->
         <!------------------------------->
         <section class="skills">
@@ -207,7 +194,6 @@
                 </p>
             </div>
 
-
 <!--Sie haben Fragen, möchten mit mir zusammenarbeiten oder mich für ein Projekt anfragen?  
 Ich freue mich auf Ihre Nachricht!
 
@@ -217,7 +203,7 @@ Ich freue mich auf Ihre Nachricht!
 
         </section>
 
-
+   
     </main>
 </body>
 </html>

@@ -1,2 +1,2 @@
 # Portfolio
-Hier befindet sich der Quellcode zu meiner eigenen Website !!!
+Hier ist meine Website zur Bewerbung
