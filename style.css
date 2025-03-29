@@ -1,54 +1,122 @@
 /* === Settings === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {                               /* Der universelle Selektor (*) setzt für alle Elemente gewisse Standardwerte */
+    margin: 0;                    /* Entfernt alle Standardaußenabstände */
+    padding: 0;                   /* Entfernt alle Standardinnenabstände */
+    box-sizing: border-box;       /* Sorgt dafür, dass Padding und Border zur Gesamtbreite gehören */
+  }
+
+/* Basis-Stile für das gesamte Dokument */
 body {
-    line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
-    background-color: #4f4949ab;
-    color: #fffcfc;
-}
+    line-height: 1.6;                               /* Erhöht den Zeilenabstand, um den Text besser lesbar zu machen */   
+   font-family: 'VT323', monospace;                 /* Setzt die Schriftart auf VT323 für einen Retro-/Terminal-Look */   
+    background-color: #1e1e1e;                    /* Setzt die Hintergrundfarbe auf ein dunkles Grau */ 
+    color: #fefefe;                               /* Helle >Schriftfarbe für den Kontrast */
+    font-size: 20pt;                              /* Grundgröße für den Text */ 
+  }
 
  /* === Navigation === */
  .navbar {
-    background-color: #333;
-    padding: 1rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    padding: 1rem;          /* Innenabstand oben und unten */
+    width: 100%;            /* 100% der Bildschirmbreite */
+    z-index: 1000;          /* Stellt sicher, dass die Navigation über allem anderen Inhalt liegt */
   }
 
   .navbar ul {
-    display: flex;
-    justify-content:  flex-end;
-    gap: 2rem;
-    list-style: none;
+    display: flex;                    /* Aktiviert Felxbox, sodass die Elemente nebeneinander angeordnet werden */
+    justify-content:  flex-end;       /* Rechtsbündige Ausrichtung */
+    gap: 2rem;                        /* Fügt göeichmäßigen Abstand von 2rem zwischen den Elementen ein */
+    list-style: none;                 /* Entfernt die Aufzählungspunkte */
   }
 
+ 
   .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #ffffff;         /* Weißer Text für die Navigationslinks */
+  text-decoration: none;   /* Keine Unterstreichung der Links */
+  font-weight: bold;       /* Macht den Text fett */
   }
 
   .navbar a:hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* Unterstreicht den Link beim Darüberfahren mit der Maus */
   }
   
-  .contact__spezial {
-    border: 1px solid violet;
-    background-color: violet;
-    padding: 0.5rem 1rem;
-  }
+  /* Spezifischer Stil für den "Kontakt"-Link */
+.navbar a.contact__spezial {
+  color: #b26cf2;                /* Lila Textfarbe */
+  border: 1px solid #b26cf2;      /* Lila Rahmen um den Link */
+  padding: 0.5rem 1rem;           /* Innenabstand, damit der Link wie ein Button wirkt */
+  transition: all 0.3s ease;      /* Sorgt für sanfte Übergänge bei Änderungen (z. B. Farbe, Größe) */
+}
 
-  /* === Start & Begrüßung === */
-  .start__terminal {
-    color: #fffcfc;
-    font-size: 1rem;
-    background: black;
-    width: 100px;
-    height: 50px;
-  }
+.navbar a.contact__spezial:hover {
+  color: #8c46db;                /* Beim Hover wird der Text in einem dunkleren Lila dargestellt */
+  border-color: #8c46db;         /* Auch der Rahmen wird dunkler */
+  transform: scale(1.05);        /* Der Link wird leicht vergrößert, um den Hover-Effekt zu betonen */
+}
+
+/* === Start & Begrüßung === */
+.start {
+  padding: 100px;        /* Fügt rundum 100px Innenabstand hinzu, damit der Inhalt nicht direkt am Rand klebt */
+}
+/* Stile für den Titelbereich in der Start-Sektion */
+.start__title h1 {
+  font-size: 3rem;       /* Sehr große Schrift für den Haupttitel */
+  margin-bottom: 1rem;   /* Abstand unter dem Titel */
+}
+
+.start__title .slogan {
+  font-size: 1.5rem;     /* Etwas kleinere Schrift für den Slogan */
+  margin-bottom: 1rem;   /* Abstand unter dem Slogan */
+}
+
+.start__title img {
+  max-width: 100%;       /* Das Bild passt sich der Breite des Containers an, ohne auszubrechen */
+  height: auto;          /* Erhält das Seitenverhältnis des Bildes */
+}
+
+/* Stile für den Beschreibungstext der Start-Sektion */
+.start__description p {
+  font-size: 1.2rem;     /* Etwas größere Schrift, damit der Text gut lesbar ist */
+  margin-top: 1rem;      /* Abstand oberhalb des Textes */
+}
+
+/* === Terminal-Element in der Start-Sektion === */
+.start__terminal {
+  color: #fffcfc;        /* Helle Schriftfarbe für das Terminal-Symbol */
+  font-size: 1rem;       /* Grundgröße des Texts */
+  background: black;     /* Schwarzer Hintergrund, wie in einem echten Terminal */
+  padding: 0.5rem 1rem;   /* Innenabstand, sodass der Inhalt nicht direkt am Rand klebt */
+  display: inline-block; /* Das Element nimmt nur so viel Platz ein, wie es benötigt */
+  cursor: pointer;       /* Zeigt an, dass das Element interaktiv ist */
+  transition: all 0.3s ease;  /* Sanfter Übergang bei Änderungen (z. B. beim Hover) */
+  position: relative;    /* Ermöglicht es, dass Pseudo-Elemente (z. B. ::after) relativ zu diesem Element positioniert werden */
+}
+
+/* Hover-Effekt für das Terminal-Element */
+.start__terminal:hover {
+  background: #333;      /* Ändert den Hintergrund leicht, wenn mit der Maus darübergefahren wird */
+}
+
+/* Pseudo-Element, das beim Hover den Text "Hello World!" anzeigt */
+.start__terminal:hover::after {
+  content: " Hello World!"; /* Der anzuzeigende Text */
+  position: absolute;       /* Ermöglicht eine präzise Positionierung relativ zum .start__terminal-Container */
+  left: 100%;               /* Positioniert den Text direkt rechts neben dem Element */
+  top: 50%;                 /* Vertikal mittig relativ zum Container */
+  transform: translateY(-50%); /* Korrigiert die vertikale Position, sodass der Text perfekt zentriert ist */
+  font-size: 1rem;          /* Schriftgröße des angezeigten Textes */
+  white-space: nowrap;      /* Verhindert, dass der Text umbricht */
+  opacity: 1;               /* Stellt sicher, dass der Text sichtbar ist */
+}
+
+/* Optionale Animation (auskommentiert)
+   Falls du eine Animation beim Hover haben möchtest, kannst du die folgende Animation aktivieren:
+   
+.start__terminal:hover::after {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+*/
