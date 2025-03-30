@@ -1,122 +1,233 @@
 /* === Settings === */
-* {                               /* Der universelle Selektor (*) setzt für alle Elemente gewisse Standardwerte */
-    margin: 0;                    /* Entfernt alle Standardaußenabstände */
-    padding: 0;                   /* Entfernt alle Standardinnenabstände */
-    box-sizing: border-box;       /* Sorgt dafür, dass Padding und Border zur Gesamtbreite gehören */
-  }
+* {
+  margin: 0;               /* Entfernt alle Standard-Außenabstände */
+  padding: 0;              /* Entfernt alle Standard-Innenabstände */
+  box-sizing: border-box;  /* Padding und Border werden in der Gesamtbreite berücksichtigt */
+}
 
-/* Basis-Stile für das gesamte Dokument */
 body {
-    line-height: 1.6;                               /* Erhöht den Zeilenabstand, um den Text besser lesbar zu machen */   
-   font-family: 'VT323', monospace;                 /* Setzt die Schriftart auf VT323 für einen Retro-/Terminal-Look */   
-    background-color: #1e1e1e;                    /* Setzt die Hintergrundfarbe auf ein dunkles Grau */ 
-    color: #fefefe;                               /* Helle >Schriftfarbe für den Kontrast */
-    font-size: 20pt;                              /* Grundgröße für den Text */ 
-  }
+  line-height: 1.6;                      /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'VT323', monospace;       /* Retro-Schriftart VT323 */
+  background-color: #1e1e1e;              /* Dunkler Hintergrund */
+  color: #fefefe;                         /* Helle Schriftfarbe */
+}
 
- /* === Navigation === */
- .navbar {
-    padding: 1rem;          /* Innenabstand oben und unten */
-    width: 100%;            /* 100% der Bildschirmbreite */
-    z-index: 1000;          /* Stellt sicher, dass die Navigation über allem anderen Inhalt liegt */
-  }
+/* === Navigation === */
+.navbar {
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .navbar ul {
-    display: flex;                    /* Aktiviert Felxbox, sodass die Elemente nebeneinander angeordnet werden */
-    justify-content:  flex-end;       /* Rechtsbündige Ausrichtung */
-    gap: 2rem;                        /* Fügt göeichmäßigen Abstand von 2rem zwischen den Elementen ein */
-    list-style: none;                 /* Entfernt die Aufzählungspunkte */
-  }
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+}
 
- 
-  .navbar a {
-  color: #ffffff;         /* Weißer Text für die Navigationslinks */
-  text-decoration: none;   /* Keine Unterstreichung der Links */
-  font-weight: bold;       /* Macht den Text fett */
-  }
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .navbar a:hover {
-    text-decoration: underline;  /* Unterstreicht den Link beim Darüberfahren mit der Maus */
-  }
-  
-  /* Spezifischer Stil für den "Kontakt"-Link */
+.navbar a:hover {
+  text-decoration: underline;
+}
+
 .navbar a.contact__spezial {
-  color: #b26cf2;                /* Lila Textfarbe */
-  border: 1px solid #b26cf2;      /* Lila Rahmen um den Link */
-  padding: 0.5rem 1rem;           /* Innenabstand, damit der Link wie ein Button wirkt */
-  transition: all 0.3s ease;      /* Sorgt für sanfte Übergänge bei Änderungen (z. B. Farbe, Größe) */
+  color: #b26cf2;
+  border: 1px solid #b26cf2;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
 
 .navbar a.contact__spezial:hover {
-  color: #8c46db;                /* Beim Hover wird der Text in einem dunkleren Lila dargestellt */
-  border-color: #8c46db;         /* Auch der Rahmen wird dunkler */
-  transform: scale(1.05);        /* Der Link wird leicht vergrößert, um den Hover-Effekt zu betonen */
+  color: #8c46db;
+  border-color: #8c46db;
+  transform: scale(1.05);
 }
 
 /* === Start & Begrüßung === */
+/* Eltern-Container als Flexbox, um Inhalte nebeneinander anzuordnen */
 .start {
-  padding: 100px;        /* Fügt rundum 100px Innenabstand hinzu, damit der Inhalt nicht direkt am Rand klebt */
-}
-/* Stile für den Titelbereich in der Start-Sektion */
-.start__title h1 {
-  font-size: 3rem;       /* Sehr große Schrift für den Haupttitel */
-  margin-bottom: 1rem;   /* Abstand unter dem Titel */
+  display: flex;                 /* Aktiviert Flexbox – Kinder werden in einer Zeile angeordnet */
+  justify-content: space-between;/* Verteilt den Platz zwischen den beiden Spalten */
+  align-items: center;           /* Zentriert die Elemente vertikal */
+  padding: 100px;                /* Abstand von allen Seiten */
 }
 
-.start__title .slogan {
-  font-size: 1.5rem;     /* Etwas kleinere Schrift für den Slogan */
-  margin-bottom: 1rem;   /* Abstand unter dem Slogan */
+/* Linke Spalte (Text-Inhalt) */
+.start__left {
+  flex: 1;                       /* Nimmt den verfügbaren Platz ein */
+  margin-right: 20px;            /* Abstand zur rechten Spalte */
 }
 
-.start__title img {
-  max-width: 100%;       /* Das Bild passt sich der Breite des Containers an, ohne auszubrechen */
-  height: auto;          /* Erhält das Seitenverhältnis des Bildes */
+/* Rechte Spalte (Bild) */
+.start__right {
+  flex: 1;                       /* Nimmt ebenfalls den gleichen Anteil ein */
+  display: flex;                 /* Damit das Bild zentriert wird */
+  justify-content: center;       /* Zentriert das Bild horizontal */
+  align-items: center;           /* Zentriert das Bild vertikal */
 }
 
-/* Stile für den Beschreibungstext der Start-Sektion */
-.start__description p {
-  font-size: 1.2rem;     /* Etwas größere Schrift, damit der Text gut lesbar ist */
-  margin-top: 1rem;      /* Abstand oberhalb des Textes */
+/* Bild-Einstellungen */
+.start__right img {
+  max-width: 100%;               /* Passt die Breite an den Container an */
+  height: auto;                  /* Erhält das Seitenverhältnis */
 }
 
-/* === Terminal-Element in der Start-Sektion === */
-.start__terminal {
-  color: #fffcfc;        /* Helle Schriftfarbe für das Terminal-Symbol */
-  font-size: 1rem;       /* Grundgröße des Texts */
-  background: black;     /* Schwarzer Hintergrund, wie in einem echten Terminal */
-  padding: 0.5rem 1rem;   /* Innenabstand, sodass der Inhalt nicht direkt am Rand klebt */
-  display: inline-block; /* Das Element nimmt nur so viel Platz ein, wie es benötigt */
-  cursor: pointer;       /* Zeigt an, dass das Element interaktiv ist */
-  transition: all 0.3s ease;  /* Sanfter Übergang bei Änderungen (z. B. beim Hover) */
-  position: relative;    /* Ermöglicht es, dass Pseudo-Elemente (z. B. ::after) relativ zu diesem Element positioniert werden */
+/* Zusätzliche Stile für Text-Inhalte im Startbereich */
+.start__left--title h1 {
+  color: #8c46db;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-/* Hover-Effekt für das Terminal-Element */
-.start__terminal:hover {
-  background: #333;      /* Ändert den Hintergrund leicht, wenn mit der Maus darübergefahren wird */
+.start__left--slogan {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Pseudo-Element, das beim Hover den Text "Hello World!" anzeigt */
-.start__terminal:hover::after {
-  content: " Hello World!"; /* Der anzuzeigende Text */
-  position: absolute;       /* Ermöglicht eine präzise Positionierung relativ zum .start__terminal-Container */
-  left: 100%;               /* Positioniert den Text direkt rechts neben dem Element */
-  top: 50%;                 /* Vertikal mittig relativ zum Container */
-  transform: translateY(-50%); /* Korrigiert die vertikale Position, sodass der Text perfekt zentriert ist */
-  font-size: 1rem;          /* Schriftgröße des angezeigten Textes */
-  white-space: nowrap;      /* Verhindert, dass der Text umbricht */
-  opacity: 1;               /* Stellt sicher, dass der Text sichtbar ist */
+.start__left--description p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
-/* Optionale Animation (auskommentiert)
-   Falls du eine Animation beim Hover haben möchtest, kannst du die folgende Animation aktivieren:
-   
-.start__terminal:hover::after {
-  animation: fadeIn 0.3s ease forwards;
+/* Terminal-Element mit Hover-Effekt */
+.start__left--terminal {
+  color: #fffcfc;
+  font-size: 1.2rem;
+  background: black;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.start__left--terminal:hover {
+  background: #333;
 }
-*/
+
+.start__left--terminal:hover::after {
+  content: " Hello World!";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 1;
+}
+
+/* =========================================
+   TIMELINE - SENKRECHTE LINIE IN DER MITTE
+   ========================================= */
+
+ /* Der übergeordnete Bereich */
+.mein__weg {
+  padding: 100px;            /* Abstand von allen Seiten */
+}
+
+/* Überschrift optional zentrieren */
+.mein__weg h2 {
+  color: #8c46db;         /* Titel-Farbe */
+  font-size: 3rem;          /* Titel-Größe */
+  margin-bottom: 1rem;      /* Abstand nach unten */
+  text-align: center;       /* Titel zentriert */
+}
+
+/* Container, der die gesamte Timeline hält */
+.timeline__container {
+  position: relative;         /* Ermöglicht, das die Linie absolut positioniert werden kann */
+  width: 80%;                 /* Breite der Timline, damit sie etwas eingerückt ist */  
+  margin: 0 auto;             /* Zentriert die Timeline im Seitenlayout */
+  padding: 2rem 0;            /* Innenabstand oben und unten */
+}
+
+.timeline__container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Die Senkrechte Linie in der Mitte */
+.timeline__line{
+  position: absolute;           /* Absolut positioniert innerhalb des Containers */
+  left: 50%;                    /* Linie genau in der Mitte (50% vom Eltern-Container) */
+  top: 0;                       /* Start oben */
+  bottom: 0;                    /* Ende unten */
+  width: 2px;                   /* Dicke der Linie */
+  background-color: #8c46db;  /* Farbe der Linie */
+}
+
+/* Jedes einzelne Timeline-Element */
+.timeline__item {
+  position: relative;         /* Für das Pseudo-Element */
+  width: calc(50% - 10px);    /* Die Box nimmt die halbe Breite ein ( links oder rechts) */
+  margin-bottom: 2rem;        /* Abstand nach unten zwischen den Einträgen*/
+  float: left;             /* Standard floaten wir erst mal nach links */
+}
+
+/* Inhalt des Timeline-Elements (Text, Überschrift) */
+.timeline__content {
+  display: inline-block;       /* Damit die Box nur so breit ist wie der Inhalt*/
+  background-color: #1e1e1e; /* Dunkler Hintergrund */
+  border: 1px solid #8c46db; /* Rahmenfarbe */
+  padding: 1rem;               /* Innenabstand */
+  position: relative;
+}
+
+/* Element links - floatet nach links, Text rechtsbündig */
+.timeline__item--left {
+  float: left;
+  text-align: right;
+  clear: both; /* Damit sich das Layout nicht verschachtelt */
+}
+
+/* Element rechts - floatet nach rechts, Text linksbündig */
+.timeline__item--right {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+/* Kleiner Verbindungs-Strich von der mittigen Linie zur Box */
+/* Für die linken Elemente (geht von Mitte zur linken Box) */
+.timeline__item--left::before {
+  content: "";
+  position: absolute;
+  top: 50%;           /* Vertikale Position (anpassen je nach Optik) */
+  right: -10px;           /* Dort, wo die Linie aus dem Container rauskommt */
+  width: 10px;            /* Reicht von der Mitte bis zur Box */
+  height: 2px;           /* Dicke der kleinen Linie */
+  background-color: #b26cf2;
+  transform: translateY(-50%);
+}
+
+/* Für Timeline-Elemente auf der rechten Seite */
+.timeline__item--right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;             /* Startet 10px von der Mittellinie entfernt */
+  width: 10px;             /* Verbindungsstrich ist 10px lang */
+  height: 2px;
+  background-color: #8c46db;
+  transform: translateY(-50%);
+}
+
+
+/* Damit der Text in den Boxen auch 10px Abstand zur Verbindungslinie hat */
+.timeline__item--left .timeline__content {
+  padding-right: 10px;
+}
+
+.timeline__item--right .timeline__content {
+  padding-left: 10px;
+}

@@ -1,108 +1,126 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewerbung - Sebastian Bührmann</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bewerbung - Sebastian Bührmann</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
-
-    <!-- Google Font - Beispiel: VT323 (schöner Retro-Look) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
+  <!-- Google Font - VT323 für den Retro-Look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
     href="https://fonts.googleapis.com/css2?family=VT323&display=swap" 
     rel="stylesheet"
-    >
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/3a8d9d58bc.js" crossorigin="anonymous"></script>
+  >
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/3a8d9d58bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
-        <!-- Navigation -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="#start">Start</a></li>
-                <li><a href="#aboutMe">Über mich</a></li>
-                <li><a href="#career">Mein Weg</a></li>
-                <li><a href="#qualifications">Qualifikationen</a></li>
-                <li><a href="#motivation">Motivation</a></li>
-                <li><a class="contact__spezial" href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
+  <main>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#aboutMe">Über mich</a></li>
+        <li><a href="#career">Mein Weg</a></li>
+        <li><a href="#qualifications">Qualifikationen</a></li>
+        <li><a href="#motivation">Motivation</a></li>
+        <li><a class="contact__spezial" href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
 
-      <!-- Startseite und Begrüßung -->
+    <!-- Startseite und Begrüßung -->
     <section class="start" id="start">
-    <div class="start__title">
-      <h1>Sebastian Bührmann</h1>
-      <p class="slogan">Aus der Praxis in den Code – mit Herz und Begeisterung.</p>
-      <img src="pfad-zum-bild.jpg" alt="Bild von mir">
-    </div>
-    <div class="start__description">
-      <p>Willkommen auf meiner Bewerbungsseite. Entdecke, wie ich Technik und Kreativität vereine!</p>
-    </div>
-    <div class="start__terminal">
-      <i class="fa-solid fa-terminal"></i>
-    </div>
+      <!-- Linke Spalte: Text-Inhalt -->
+      <div class="start__left">
+        <div class="start__left--title">
+          <h1>Sebastian Bührmann</h1>
+          <p class="start__left--slogan">Aus der Praxis in den Code – mit Herz und Begeisterung.</p>
+        </div>
+        <div class="start__left--description">
+          <p>Willkommen auf meiner Bewerbungsseite. Entdecke, wie ich Technik und Kreativität vereine!</p>
+        </div>
+        <div class="start__left--terminal">
+          <i class="fa-solid fa-terminal"></i>
+        </div>
+      </div>
+
+      <!-- Rechte Spalte: Bild -->
+      <div class="start__right">
+        <img src="pfad-zum-bild.jpg" alt="Bild von mir">
+      </div>
     </section>
 
 
-        <!-------------------->
-        <!---- Timeline ---->
-        <!-------------------->
-        <!--   <section class="timeline">
-            <div class="timeline__title">
-                <h1>Mein Werdegang</h1>
-            </div>
 
+    <!-- Mein Weg (Timeline) -->
+    <section class="mein__weg" id="mein-weg">
+        <h2>Mein Weg</h2>
+        
+        <div class="timeline__container">
+            <!-- Senkrechter Strich in der Mitte-->
             <div class="timeline__line"></div>
-                <div class="timeline__item">
+
+            <!-- Timeline-Element -->
+            <div class="timeline__item timeline__item--left">
+                <div class="timeline__content">
                     <h3>02/2025 - 02/2027</h3>
-                    <p>Umschulung zum Fachinformatiker für Anwendungsentwicklung - bfw, Vechta</p>
+                        <p>Umschulung zum Fachinformatiker für Anwendungsentwicklung - bfw, Vechta</p>
                 </div>
-
-                <div class="timeline__item">
+            </div>
+          <!-- Weiteres Element-->
+            <div class="timeline__item timeline__item--right">
+                <div class="timeline__content">
                     <h3>11/2020 - 12/2024</h3>
-                    <p>Monteur/Kollonnenführer im Kabel- und Rohrleitungsnetzbau - Emil Tepe GmbH, Dinklage</p>
+                        <p>Monteur/Kollonnenführer im Kabel- und Rohrleitungsnetzbau - Emil Tepe GmbH, Dinklage</p>
                 </div>
-
-                <div class="timeline__item">
+            </div>
+          <!-- Weiteres Element-->
+            <div class="timeline__item timeline__item--right">
+                <div class="timeline__content">
                     <h3>02/2020 - 10/2020</h3>
-                    <p>Kfz-Karosseriebauer/Mechatroniker - Auto Meyer GmbH, Lohne</p>
+                        <p>Kfz-Karosseriebauer/Mechatroniker - Auto Meyer GmbH, Lohne</p>
                 </div>
-
-                <div class="timeline__item">
+            </div>
+          <!-- Weiteres Element -->
+            <div class="timeline__item timeline__item--left">
+                <div class="timeline__content">
                     <h3>02/2017 - 01/2020</h3>
-                    <p>Ausbildung zum Kfz-Mechatroniker - Autodienst Pawelzik, Drebber</p>
-                    <p>Abschluss: Gesellenbrief 29.01.2020</p>
+                        <p>Ausbildung zum Kfz-Mechatroniker - Autodienst Pawelzik, Drebber</p>
+                            <p>Abschluss: Gesellenbrief 29.01.2020</p>
                 </div>
-
-                <div class="timeline__item">
+            </div>
+          <!-- Weiteres Element-->
+            <div class="timeline__item timeline__item--left">
+                <div class="timeline__content">
                     <h3>08/2016 - 01/2017</h3>
-                    <p>Berufsfachschule Metalltechnik - Berufsbildungszentrum Dr. Jürgen Ulderup, Diepholz</p>
+                        <p>Berufsfachschule Metalltechnik - Berufsbildungszentrum Dr. Jürgen Ulderup, Diepholz</p>
                 </div>
-
-                <div class="timeline__item">
+            </div>
+          <!-- Weiteres Element-->
+            <div class="timeline__item timeline__item--left">
+                <div class="timeline__content">
                     <h3>08/2015 - 08/2016</h3>
-                    <p>Realschule Diepholz, Diepholz</p>
-                    <p>Abschluss: Sekundarabschluss I</p>
-                </div>
-
-                <div class="timeline__item">
+                        <p>Realschule Diepholz, Diepholz</p>
+                            <p>Abschluss: Sekundarabschluss I</p>
+                </div>    
+            </div>
+          <!-- Weiteres Element -->
+            <div class="timeline__item timeline__item--left">
+                <div class="timeline__content">
                     <h3>08/2009 - 07/2015</h3>
-                    <p>Christian-Hülsmeyer-Schule, Barnstorf</p>
-                </div>
+                        <p>Christian-Hülsmeyer-Schule, Barnstorf</p>
+                </div>        
+            </div>
+        </div>
+      </section>
+    
+  </main>
+</body>
+</html>
 
-                <div class="timline__applicationDocuments">
-                    <p>Sie möchten meine vollständigen Bewerbungsunterlagen einsehen?  
-                        Ich sende Ihnen diese gerne per E-Mail zu – ganz unkompliziert und persönlich.
-                    </p>
-                    <input type="button" value="Bewerbungsunterlagen anfordern" class="timeline__applicationDocuments--button">
+      
 
-                </div>
-        </section>
         
         
 
@@ -152,61 +170,15 @@
         </section> 
 
 
-        <!-------------------------------------------------------->
-        <!---- Mit mir arbeiten & Werte die mir wichtig sind  ---->
-        <!-------------------------------------------------------->
-        <section class="workWithMe">
-            <div class="workWithMe__title">
-                <h1>🤝 Mit mir arbeiten</h1>
-                <p class="workWithMe__description">Sie möchten wissen, wie es ist, mit mir zusammenzuarbeiten? <br>
-                    Ich bin jemand, der sich reinhängt, mitdenkt und offen kommuniziert. Wenn ich eine Aufgabe bekomme, erledige ich sie zuverlässig und sorgfältig – und wenn ich etwas nicht weiß, finde ich es heraus. <br>
-                    Ich arbeite gerne lösungsorientiert und bringe meine Erfahrung aus der Praxis in jedes Projekt mit ein. Gleichzeitig schätze ich professionelle, wertschätzende Zusammenarbeit – ohne Ego-Spielchen oder Stillstand durch alte Gewohnheiten. <br>         
-                    Ich bin nicht auf der Suche nach „irgendeinem Projekt“ – sondern nach Aufgaben, bei denen ich wirklich etwas beitragen kann. Wenn das auch Ihr Anspruch ist, freue ich mich auf Ihre Nachricht. <br>
-                  </p>
-            </div>
+
+                <div class="timline__applicationDocuments">
+                    <p>Sie möchten meine vollständigen Bewerbungsunterlagen einsehen?  
+                        Ich sende Ihnen diese gerne per E-Mail zu – ganz unkompliziert und persönlich.
+                    </p>
+                    <input type="button" value="Bewerbungsunterlagen anfordern" class="timeline__applicationDocuments--button">
+
+                </div>
         </section>
-
-        <section class="values">
-            <div class="values__item">
-                <h3>❤️ Werte, die mir wichtig sind</h3>
-                <p>In meinen bisherigen Berufsjahren habe ich eins ganz klar gelernt: Ein gutes Ergebnis ist nur möglich, wenn alle im Team mitziehen. Deshalb lege ich großen Wert auf Zuverlässigkeit, Eigenverantwortung und Lernbereitschaft. <br>
-                    Ich arbeite gerne mit Menschen zusammen, die mitdenken, neugierig bleiben und offen für neue Lösungen sind. „So haben wir das schon immer gemacht“ ist kein Argument – wer sich weiterentwickeln will, muss auch bereit sein, Dinge zu hinterfragen. <br> 
-                    Verantwortung zu übernehmen, bedeutet für mich nicht nur, Aufgaben zu erledigen – sondern sie mit Sorgfalt, Ehrgeiz und dem Blick fürs Ganze anzugehen. <br>
-                </p>
-                
-                <p> ✔️ Vertrauen <br>
-                    ✔️ Ehrlichkeit <br>
-                    ✔️ Zuverlässigkeit <br>
-                    ✔️ Offenheit <br>
-                    ✔️ Respekt <br>
-                    ✔️ Wertschätzung <br>
-                </p>
-            </div>
-        </section>
-
-
-
-        <!------------------------------->
-        <!---- Kontaktseite-------------->
-        <!------------------------------->
-        <section class="contact">
-            <div class="contact__title">
-                <h1>Kontakt</h1>
-                <p class="contact__description">Sie haben Fragen, Anregungen oder möchten einfach mal „Hallo“ sagen? <br>
-                    Ich freue mich über jede Nachricht und melde mich so schnell wie möglich zurück. <br>
-                    Schreiben Sie mir einfach eine E-Mail oder nutzen Sie das Kontaktformular – ich freue mich auf Sie! <br>
-                </p>
-            </div>
-
-<!--Sie haben Fragen, möchten mit mir zusammenarbeiten oder mich für ein Projekt anfragen?  
-Ich freue mich auf Ihre Nachricht!
-
-📍 Dinklage  
-📧 sebastianbuehrmann@t-online.de  
-📱 0176 / 366 753 48--->
-
-        </section>
-
    
     </main>
 </body>
