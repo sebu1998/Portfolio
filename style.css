@@ -271,4 +271,11 @@ body {
   padding-left: 10px;
 }
 
+.timeline__weiterbildungen {
+  margin-top: 2rem;         /* Abstand nach oben */
+  text-align: center;       /* Text zentriert */
+
+}
+
+
 
