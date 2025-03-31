@@ -125,17 +125,56 @@ body {
   opacity: 1;
 }
 
+
+/* =========================================
+   About Me Section
+   ========================================= */
+
+.aboutMe {
+  padding: 100px;            /* Abstand von allen Seiten */
+}
+
+/* Überschrift optional zentrieren */
+.aboutMe h2 {
+  color: #8c46db;         /* Titel-Farbe */
+  font-size: 3rem;          /* Titel-Größe */
+  margin-bottom: 1rem;      /* Abstand nach unten */
+  text-align: center;       /* Titel zentriert */
+}
+
+.aboutMe__container {
+  display: flex;             /* Flexbox für die Anordnung der Kinder */
+  justify-content: space-between; /* Platz zwischen den Spalten */
+  align-items: center;       /* Vertikale Zentrierung */
+}
+
+/* Linke Spalte (Text-Inhalt) */
+.aboutMe__left {
+  flex: 1;                   /* Nimmt den verfügbaren Platz ein */
+  margin-right: 20px;        /* Abstand zur rechten Spalte */
+}
+
+/* Rechte Spalte (Bild) */
+.aboutMe__right {
+  flex: 1;                   /* Nimmt ebenfalls den gleichen Anteil ein */
+  display: flex;             /* Damit das Bild zentriert wird */
+  justify-content: center;   /* Zentriert das Bild horizontal */
+  align-items: center;       /* Zentriert das Bild vertikal */
+}
+
+
+
 /* =========================================
    TIMELINE - SENKRECHTE LINIE IN DER MITTE
    ========================================= */
 
  /* Der übergeordnete Bereich */
-.mein__weg {
+.carrer {
   padding: 100px;            /* Abstand von allen Seiten */
 }
 
 /* Überschrift optional zentrieren */
-.mein__weg h2 {
+.carrer h2 {
   color: #8c46db;         /* Titel-Farbe */
   font-size: 3rem;          /* Titel-Größe */
   margin-bottom: 1rem;      /* Abstand nach unten */
@@ -231,3 +270,5 @@ body {
 .timeline__item--right .timeline__content {
   padding-left: 10px;
 }
+
+
